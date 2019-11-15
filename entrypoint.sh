@@ -2,7 +2,7 @@
 echo "Building"
 export CONVOX_RACK=$INPUT_RACK
 release=$(convox build --app $INPUT_APP --id)
-if [ -z "$RELEASE" ]
+if [ -z "$release" ]
 then
   echo "Build failed"
   exit 1
