@@ -1,8 +1,7 @@
 #!/bin/sh
 echo "Building"
-cd backend
 export CONVOX_RACK=$INPUT_RACK
-release=$(convox build --app $INPUT_APP --id)
+release=$(cd backend && convox build --app $INPUT_APP --id)
 if [ -z "$release" ]
 then
   echo "Build failed"
