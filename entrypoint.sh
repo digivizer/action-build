@@ -12,4 +12,4 @@ then
   exit 1
 fi
 echo ::set-output name=release::$release
-echo ::set-env name=RELEASE::$release
+echo "RELEASE=$release" >> $GITHUB_ENV
